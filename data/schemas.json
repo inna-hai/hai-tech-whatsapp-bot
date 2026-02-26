@@ -1,0 +1,153 @@
+{
+  "lead_extraction": {
+    "description": "Schema for extracting lead information from conversation",
+    "type": "object",
+    "properties": {
+      "full_name": {
+        "type": "string",
+        "description": "שם מלא של הפונה"
+      },
+      "phone": {
+        "type": "string",
+        "description": "מספר טלפון (מגיע מוואטסאפ)"
+      },
+      "email": {
+        "type": "string",
+        "description": "כתובת מייל"
+      },
+      "child_name": {
+        "type": "string",
+        "description": "שם הילד (אם רלוונטי)"
+      },
+      "child_age": {
+        "type": "integer",
+        "description": "גיל הילד"
+      },
+      "child_grade": {
+        "type": "string",
+        "description": "כיתה (א'-י\"ב)"
+      },
+      "interests": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["minecraft", "roblox", "python", "javascript", "ai", "web", "3d", "discord", "scratch", "java", "other"]
+        },
+        "description": "תחומי עניין"
+      },
+      "preferred_format": {
+        "type": "string",
+        "enum": ["digital", "private", "pair", "institution", "unknown"],
+        "description": "פורמט מועדף - דיגיטלי/פרטי/זוגי/מוסד"
+      },
+      "lead_type": {
+        "type": "string",
+        "enum": ["parent", "institution", "teacher", "other"],
+        "description": "סוג הליד"
+      },
+      "source_details": {
+        "type": "string",
+        "description": "פרטים נוספים על מקור הפנייה"
+      }
+    },
+    "required": ["phone"]
+  },
+
+  "conversation_summary": {
+    "description": "Schema for conversation summary",
+    "type": "object",
+    "properties": {
+      "summary_short": {
+        "type": "string",
+        "maxLength": 200,
+        "description": "סיכום קצר בשורה אחת"
+      },
+      "summary_structured": {
+        "type": "object",
+        "properties": {
+          "topic": {
+            "type": "string",
+            "description": "נושא השיחה"
+          },
+          "child_details": {
+            "type": "string",
+            "description": "פרטים על הילד"
+          },
+          "interests": {
+            "type": "string",
+            "description": "תחומי עניין"
+          },
+          "questions_asked": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "שאלות שנשאלו"
+          },
+          "recommendations_given": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "המלצות שניתנו"
+          },
+          "next_steps": {
+            "type": "string",
+            "description": "צעדים הבאים שסוכמו"
+          },
+          "open_questions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "שאלות פתוחות שדורשות מענה"
+          }
+        }
+      },
+      "tags": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "תגיות רלוונטיות",
+        "examples": ["hot_lead", "needs_followup", "price_sensitive", "institution", "returning_customer", "minecraft", "roblox", "young_child", "teenager"]
+      },
+      "sentiment": {
+        "type": "string",
+        "enum": ["positive", "neutral", "negative", "hesitant"],
+        "description": "הרגשת הלקוח"
+      },
+      "urgency": {
+        "type": "string",
+        "enum": ["high", "medium", "low"],
+        "description": "דחיפות הפנייה"
+      },
+      "recommended_action": {
+        "type": "string",
+        "enum": ["call_back", "send_info", "schedule_demo", "wait", "close"],
+        "description": "פעולה מומלצת"
+      }
+    },
+    "required": ["summary_short", "tags"]
+  },
+
+  "crm_sync_payload": {
+    "description": "Payload for CRM sync",
+    "type": "object",
+    "properties": {
+      "lead": {
+        "$ref": "#/lead_extraction"
+      },
+      "summary": {
+        "$ref": "#/conversation_summary"
+      },
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "conversation_id": { "type": "string" },
+          "phone_e164": { "type": "string" },
+          "message_count": { "type": "integer" },
+          "first_message_at": { "type": "string", "format": "date-time" },
+          "last_message_at": { "type": "string", "format": "date-time" },
+          "source": { "type": "string", "const": "whatsapp" },
+          "answered_by_bot": { "type": "boolean" },
+          "idempotency_key": { "type": "string" }
+        }
+      }
+    }
+  }
+}

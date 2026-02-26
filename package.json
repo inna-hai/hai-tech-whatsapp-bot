@@ -1,0 +1,26 @@
+{
+  "name": "hai-tech-whatsapp-bot",
+  "version": "1.0.0",
+  "description": "בוט וואטסאפ חכם לשירות לקוחות ואיסוף לידים עבור דרך ההייטק.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "better-sqlite3": "^12.6.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "openai": "^6.25.0",
+    "pm2": "^6.0.14",
+    "uuid": "^13.0.0"
+  }
+}

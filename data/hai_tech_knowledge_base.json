@@ -1,0 +1,420 @@
+{
+  "company": {
+    "name": "דרך ההייטק",
+    "name_en": "Derech HaHighTech",
+    "tagline": "טכנולוגיה, תכנות ו-AI לילדים",
+    "founded": 2019,
+    "description": "דרך ההייטק הוקמה ב-2019 ע\"י שני מהנדסי תוכנה שרצו לשנות את הדרך שבה ילדים לומדים תכנות. אנחנו מאמינים שהדרך הטובה ביותר ללמד ילדים היא דרך מה שהם כבר אוהבים.",
+    "founders": [
+      {
+        "name": "אינה גרוייס",
+        "role": "מייסדת ומנכ\"לית",
+        "background": "מהנדסת תוכנה עם 20 שנות ניסיון בהייטק. יזמית סטארטאפ בתחום AI."
+      },
+      {
+        "name": "עמי מידר",
+        "role": "מייסד ושותף",
+        "background": "מהנדס תוכנה בכיר עם 20+ שנות ותק. מומחה בפיתוח תוכנה ואוטומציה."
+      }
+    ],
+    "stats": {
+      "graduates": "5,000+",
+      "institutions": "50+",
+      "years_experience": 6,
+      "age_range": "7-18"
+    },
+    "contact": {
+      "whatsapp": "972533009742",
+      "whatsapp_link": "https://wa.me/972533009742",
+      "website": "https://hai.tech"
+    },
+    "unique_selling_points": [
+      "לומדים מהבית בסביבה מוכרת",
+      "לומדים מאנשי הייטק אמיתיים",
+      "מתאים לכולם — בלי ניסיון קודם",
+      "מקבלים מענה אישי לכל שאלה",
+      "חוזרים על החומר מתי שרוצים",
+      "גישה לנצח לקורסים דיגיטליים",
+      "תמיכה מקצועית בוואטסאפ",
+      "משלבים כלי AI מתקדמים בכל המסלולים"
+    ]
+  },
+  
+  "target_audiences": {
+    "parents": {
+      "description": "הורים לילדים בגילאי 7-18 שמחפשים העשרה טכנולוגית",
+      "pain_points": [
+        "הילד מבזבז זמן על משחקים",
+        "רוצים שהילד ילמד משהו שימושי",
+        "חוששים שהילד יישאר מאחור בעולם הטכנולוגי",
+        "מחפשים פעילות איכותית אחרי הצהריים"
+      ],
+      "messaging_tone": "חם, מרגיע, מקצועי, לא דוחף"
+    },
+    "institutions": {
+      "description": "מנהלי בתי ספר, מתנ\"סים, רשויות מקומיות",
+      "pain_points": [
+        "צריכים תוכן טכנולוגי איכותי",
+        "רוצים פתרון מוכן בלי כאב ראש",
+        "צריכים תיעוד ותעודות"
+      ],
+      "messaging_tone": "מקצועי, עסקי, ממוקד תוצאות"
+    }
+  },
+
+  "courses": {
+    "digital_self_paced": [
+      {
+        "id": "scratch",
+        "title": "קורס תכנות בסקראץ'",
+        "short_description": "יצירת משחקים ואנימציות בעזרת בלוקים. הבסיס המושלם לחשיבה מחשובית.",
+        "age_range": "7-10",
+        "price": 497,
+        "lessons_count": 20,
+        "level": "מתחילים",
+        "language": "JavaScript,Python,Lua",
+        "includes_ai": true,
+        "prerequisites": "לא נדרש ידע קודם",
+        "skills": ["חשיבה לוגית", "פתרון בעיות", "יצירתיות", "תכנות בסיסי"]
+      },
+      {
+        "id": "minecraft-worlds",
+        "title": "מיינקראפט: בניית עולמות",
+        "short_description": "בניית עיר שלמה עם פארקים, מזרקות וכבישים. למידה חווייתית ויצירתית.",
+        "age_range": "8-11",
+        "price": 497,
+        "lessons_count": 16,
+        "level": "מתחילים",
+        "includes_ai": true,
+        "prerequisites": "לא נדרש ידע קודם"
+      },
+      {
+        "id": "minecraft-escape-room",
+        "title": "מיינקראפט: חדר בריחה",
+        "short_description": "בניית פירמידה וחדר בריחה עם קוד. לולאות, משתנים ופקודות מתקדמות.",
+        "age_range": "10+",
+        "price": 297,
+        "lessons_count": 7,
+        "level": "מתחילים עד בינוני",
+        "includes_ai": true
+      },
+      {
+        "id": "minecraft-javascript",
+        "title": "JavaScript במיינקראפט",
+        "short_description": "שפת JavaScript הפופולרית דרך חוויית משחק מיינקראפט. תכנות אמיתי!",
+        "age_range": "10-13",
+        "price": 497,
+        "lessons_count": 15,
+        "level": "מתחילים",
+        "programming_language": "JavaScript",
+        "includes_ai": true
+      },
+      {
+        "id": "minecraft-summer-camp",
+        "title": "מחנה קיץ מיינקראפט JavaScript",
+        "short_description": "גרסה מקוצרת וממוקדת ללימוד JavaScript. מושלם לחופשה!",
+        "age_range": "9-13",
+        "price": 297,
+        "lessons_count": 6,
+        "level": "מתחילים",
+        "programming_language": "JavaScript",
+        "badge": "מחנה קיץ"
+      },
+      {
+        "id": "minecraft-java-plugins",
+        "title": "Minecraft Java Plugins",
+        "short_description": "הקמת שרת מיינקראפט משלכם! לימוד שפת Java באופן מעשי וכיפי.",
+        "age_range": "12+",
+        "price": 497,
+        "lessons_count": 18,
+        "level": "מתקדמים",
+        "programming_language": "Java",
+        "includes_ai": true
+      },
+      {
+        "id": "roblox-lua",
+        "title": "קורס רובלוקס - פיתוח משחקים עם Lua",
+        "short_description": "הקורס הכי מבוקש! בניית משחקים ב-Roblox לכל פלטפורמה.",
+        "age_range": "10+",
+        "price": 497,
+        "lessons_count": 12,
+        "level": "מתחילים",
+        "programming_language": "Lua",
+        "includes_ai": true,
+        "popular": true
+      },
+      {
+        "id": "python-pygame",
+        "title": "Python: פיתוח משחקים",
+        "short_description": "pygame ופיתוח משחקים עם גרפיקה. השפה הכי מבוקשת בשוק העבודה!",
+        "age_range": "10+",
+        "price": 497,
+        "lessons_count": 19,
+        "level": "מתחילים עד מתקדמים",
+        "programming_language": "Python",
+        "includes_ai": true
+      },
+      {
+        "id": "web-dev-ai",
+        "title": "פיתוח אתרים + AI",
+        "short_description": "בניית אתרים, פיתוח משחקים ושימוש בכלי בינה מלאכותית מתקדמים.",
+        "age_range": "10+",
+        "price": 497,
+        "lessons_count": 12,
+        "level": "מתחילים",
+        "programming_language": "HTML/CSS/JavaScript",
+        "includes_ai": true
+      },
+      {
+        "id": "discord-bots",
+        "title": "בוטים לדיסקורד",
+        "short_description": "פיתוח בוטים מתקדמים שהופכים את השרת שלכם למגניב פי 1000!",
+        "age_range": "12+",
+        "price": 497,
+        "lessons_count": 16,
+        "level": "מתקדמים",
+        "programming_language": "Node.js",
+        "includes_ai": true
+      },
+      {
+        "id": "3d-printing",
+        "title": "הדפסת תלת מימד",
+        "short_description": "תכנון ומידול מודלים להדפסה אמיתית. מהרעיון למוצר מוחשי!",
+        "age_range": "10+",
+        "price": 497,
+        "lessons_count": 5,
+        "level": "מתחילים",
+        "includes_ai": true
+      },
+      {
+        "id": "canva-ai",
+        "title": "קאנבה + בינה מלאכותית",
+        "short_description": "שליטה מלאה בקאנבה עם כלי AI. מתבנית ועד מוצר מוגמר.",
+        "age_range": "10+",
+        "target": "מורים/מחנכים",
+        "price": 497,
+        "lessons_count": 16,
+        "level": "מתחילים",
+        "includes_ai": true
+      }
+    ],
+    
+    "private_lessons": {
+      "description": "שיעורים אישיים בזום עם מדריך מקצועי ותוכנית מותאמת אישית",
+      "lesson_duration_minutes": 45,
+      "packages": [
+        {
+          "name": "Gold",
+          "lessons": 16,
+          "price_per_lesson": 166,
+          "total_price": 2656,
+          "includes": ["מדריך אישי מנוסה", "תוכנית מותאמת אישית", "הקלטות לצפייה חוזרת", "קורס דיגיטלי במתנה"]
+        },
+        {
+          "name": "Classic",
+          "lessons": 24,
+          "price_per_lesson": 160,
+          "total_price": 3840,
+          "discount": "6%",
+          "popular": true,
+          "includes": ["מדריך אישי מנוסה", "תוכנית מותאמת אישית", "הקלטות לצפייה חוזרת", "2 קורסים דיגיטליים במתנה"]
+        },
+        {
+          "name": "Premium",
+          "lessons": 32,
+          "price_per_lesson": 156,
+          "total_price": 4992,
+          "discount": "10%",
+          "includes": ["מדריך אישי מנוסה", "תוכנית מותאמת אישית", "הקלטות לצפייה חוזרת", "4 קורסים דיגיטליים במתנה"]
+        }
+      ],
+      "pair_packages": [
+        {
+          "name": "Gold זוגי",
+          "lessons": 16,
+          "price_per_participant": 117,
+          "includes": ["למידה עם חבר/אח", "קורס דיגיטלי במתנה"]
+        },
+        {
+          "name": "Classic זוגי",
+          "lessons": 24,
+          "price_per_participant": 112,
+          "includes": ["למידה עם חבר/אח", "2 קורסים דיגיטליים במתנה"]
+        },
+        {
+          "name": "Premium זוגי",
+          "lessons": 32,
+          "price_per_participant": 101,
+          "best_value": true,
+          "includes": ["למידה עם חבר/אח", "כל 8 הקורסים במתנה"]
+        }
+      ],
+      "guarantee": "החזר כספי מובטח עד השיעור השלישי - אין מחויבות!"
+    }
+  },
+
+  "institution_programs": {
+    "description": "תוכניות למוסדות חינוך - מוכרים בגפ\"ן ומאושרים במאגר משרד החינוך",
+    "catalog_numbers": {
+      "יזמות_טכנולוגית_ו_AI": 53659,
+      "מתכנתים_צעירים": 9682,
+      "הכשרה_להוראה_טכנולוגית": 34102
+    },
+    "programs": [
+      {
+        "name": "CodeStart – חשיבה מחשובית עם Scratch",
+        "grades": "א'-ד'",
+        "description": "היכרות עם תכנות חזותי וחשיבה לוגית. יצירת משחקים, אנימציות ופרויקטים אישיים.",
+        "duration": "שנתי / חצי שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "AI Creators – בינה מלאכותית יוצרת",
+        "grades": "ג'-ו'",
+        "description": "עבודה עם כלי AI ליצירת סיפורים, מוזיקה, ירחון בית ספרי ומשחק קופסא.",
+        "duration": "שנתי / חצי שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "STEM ומיינקראפט: בונים עתיד ירוק",
+        "grades": "ג'-ו'",
+        "description": "בניית וחקירת עולמות של אנרגיה ירוקה בסביבת Minecraft Education Edition.",
+        "duration": "שנתי / חצי שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "יזמות ובינה מלאכותית",
+        "grades": "ה'-ו'",
+        "description": "פיתוח רעיונות חדשניים והפיכתם למיזמים אמיתיים בעזרת כלי AI.",
+        "duration": "שנתי / חצי שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "FutureMakers – יזמות בעידן החדש",
+        "grades": "ז'-י\"ב",
+        "description": "פיתוח מיזמים בצוות, שימוש ב-AI לפתרון בעיות אמיתיות והכנת אפליקציה.",
+        "duration": "שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "פיתוח אפליקציות ובינה מלאכותית",
+        "grades": "ז'-ט'",
+        "description": "פיתוח אפליקציות עם יכולות AI — צ'אטבוטים, תכנון, תכנות ויזמות.",
+        "duration": "שנתי",
+        "includes_certificate": true
+      },
+      {
+        "name": "האקתונים וימי שיא",
+        "grades": "כל הגילאים",
+        "description": "אירוע שיא בו תלמידים הופכים ליזמים ליום — חושבים, מתכננים ומפתחים פתרונות.",
+        "duration": "חד פעמי / סדנה"
+      }
+    ],
+    "teacher_programs": [
+      {
+        "name": "קורס בינה מלאכותית למורים",
+        "description": "שימוש בכלי AI בעבודה היומיומית: שאלונים, מערכי שיעור, מצגות ודוחות תלמידים.",
+        "duration": "8-15 מפגשים",
+        "includes_certificate": true
+      },
+      {
+        "name": "פדגוגיה מבוססת פרויקטים + AI",
+        "description": "שילוב PBL עם כלי AI. תכנון יחידות הוראה סביב אתגר אמיתי.",
+        "duration": "8-15 מפגשים",
+        "includes_certificate": true
+      },
+      {
+        "name": "הכשרה להוראה טכנולוגית",
+        "description": "תכנית מעשית למורים שרוצים ללמד תכנות, AI וחשיבה מחשובית. כולל משאבים מוכנים.",
+        "duration": "8-15 מפגשים",
+        "includes_certificate": true
+      }
+    ],
+    "partner_institutions": [
+      "אוניברסיטת בן גוריון",
+      "מרכז חוסידמן לנוער שוחר מדע",
+      "אוניברסיטת תל אביב",
+      "SCE המכללה להנדסה",
+      "אורט",
+      "תיכון עירוני רבין",
+      "תיכון המקיף עומר",
+      "מועצה אזורית חבל מודיעין",
+      "כיוונים באר שבע",
+      "מרכז סקו\"פ חולון"
+    ],
+    "benefits_for_institutions": [
+      "אפס התעסקות — אנחנו מטפלים בהכל",
+      "מאושר ומבוטח — בלי סיכונים",
+      "הורים מרוצים — זו התוכנית שהם רוצים",
+      "תיעוד מלא — דיווחים, תעודות, הכל מסודר"
+    ]
+  },
+
+  "faq": [
+    {
+      "question": "לאיזה גיל זה מתאים?",
+      "answer": "לכל ילד וילדה מגיל 7 עד 18. מתחילים ברמה שמתאימה — מסקראץ' לקטנים ועד Python ו-Java למתקדמים."
+    },
+    {
+      "question": "אין ידע קודם בתכנות — זה בסדר?",
+      "answer": "בהחלט! לומדים מאפס, צעד אחר צעד. לא צריך שום ידע קודם."
+    },
+    {
+      "question": "מה צריך כדי להתחיל?",
+      "answer": "רק מחשב עם אינטרנט. לקורסי מיינקראפט צריך גם את המשחק (Java Edition)."
+    },
+    {
+      "question": "מה קורה אם נתקעים?",
+      "answer": "שולחים שאלה בוואטסאפ ומקבלים מענה מקצועי. אף אחד לא נשאר לבד!"
+    },
+    {
+      "question": "אפשר לחזור על החומר?",
+      "answer": "כן! מקבלים גישה לנצח — אפשר לצפות בשיעורים שוב ושוב, בלי הגבלה."
+    },
+    {
+      "question": "מה לומדים?",
+      "answer": "שפות אמיתיות: JavaScript, Python, Lua — אותן שפות שמשתמשים בהן בחברות הייטק אמיתיות."
+    },
+    {
+      "question": "אילו קורסים אתם מציעים לילדים בגילאים 8-18?",
+      "answer": "אנו מציעים קורסים במיינקראפט, קורסים ברובלוקס, פיתוח אתרים, וקורסים בבינה מלאכותית, המתאימים לכל הרמות."
+    },
+    {
+      "question": "מה היתרון של קורסים פרטיים מול קורסים קבוצתיים?",
+      "answer": "קורסים פרטיים מציעים תשומת לב אישית ויכולת להתאים את התוכן לצרכים הספציפיים של הילד, בעוד שקורסים קבוצתיים מעודדים עבודת צוות ולמידה חברתית."
+    },
+    {
+      "question": "כיצד ניתן להירשם לקורסים שלכם?",
+      "answer": "ניתן להירשם דרך האתר שלנו בקלות, פשוט בחרו את הקורס הרצוי ומלאו את הטופס המקוון."
+    }
+  ],
+
+  "testimonials": [
+    {
+      "text": "במרכז חוסידמן לנוער שוחר מדע באוניברסיטת בן גוריון, בחרנו לעבוד עם דרך ההייטק. רמת ההדרכה והמקצועיות עלו על הציפיות.",
+      "author": "איילת אסיסקוביץ",
+      "affiliation": "אוניברסיטת בן גוריון"
+    },
+    {
+      "text": "הייתי סקפטית בהתחלה, אבל עדי ממש פרחה! היא עברה מלשחק מיינקראפט ללבנות עולמות שלמים בעצמה. עכשיו היא מלמדת את החברות שלה.",
+      "author": "מיכל, אמא של עדי",
+      "location": "באר-שבע"
+    },
+    {
+      "text": "חשבתי שזה עוד בזבוז זמן על המחשב. טעיתי. אביב הראה לי משחק שהוא בנה לבד — עם קוד אמיתי! עכשיו אני הכי גאה.",
+      "author": "יוסי, אבא של אביב",
+      "location": "באר-שבע"
+    },
+    {
+      "text": "תוך חודשיים איתן עבר מ'שחקן רובלוקס' ל'יוצר רובלוקס'. המשחק שלו כבר הגיע ל-500 שחקנים. שווה כל שקל.",
+      "author": "רונית, אמא של איתן",
+      "location": "חולון"
+    }
+  ],
+
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2026-02-26",
+    "source": "hai.tech website scraping"
+  }
+}
