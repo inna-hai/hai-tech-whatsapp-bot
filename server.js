@@ -399,7 +399,7 @@ app.get('/conversation/:phone', (req, res) => {
 // ========== CRM Integration ==========
 const CRM_CONFIG = {
   endpoint: 'https://crm.orma-ai.com/api/webhook/leads',
-  apiKey: 'haitech-crm-api-key-2026'
+  apiKey: '9d75edbf83df79261c4f9bd8b3943f18338854d1fc3e7cbd1fece3df17825f9a'
 };
 
 async function sendToCRM(leadData) {
