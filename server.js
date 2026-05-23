@@ -263,6 +263,37 @@ ${conversation.rolling_summary ? `סיכום קודם: ${conversation.rolling_su
 `;
 }
 
+function containsContactLoopReferral(replyText) {
+  if (!replyText) return false;
+
+  const text = String(replyText).toLowerCase();
+
+  const whatsappLinkPattern = /wa\.me\/[\d+]*972\d+|api\.whatsapp\.com|צור קשר בוואטסאפ|קישור לוואטסאפ/;
+  const supportWhatsappPattern = /(פנה|לפנות|תפנה|צרו קשר|צור קשר|ממליץ).*?(תמיכה|צוות|נציג).*?(וואטסאפ|whatsapp)/s;
+  const siteOrWhatsappPattern = /(אתר|האתר).*?(או|\/).*?(וואטסאפ|whatsapp)|(וואטסאפ|whatsapp).*?(או|\/).*?(אתר|האתר)/s;
+
+  return whatsappLinkPattern.test(text) ||
+    supportWhatsappPattern.test(text) ||
+    siteOrWhatsappPattern.test(text);
+}
+
+function isExistingCustomerSupportRequest(userText) {
+  if (!userText) return false;
+
+  const text = String(userText).toLowerCase();
+  return /(גישה|הרשאה|הרשאות|התחבר|התחברות|סיסמה|חשבון|הקורס נעלם|לא מופיע|לא מצליח|לא מצליחה|תקלה|בעיה|שילמתי|תשלום|רכשתי|קניתי|החזר)/.test(text);
+}
+
+function buildHumanEscalationReply(userText) {
+  const hasEmail = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i.test(userText || '');
+
+  if (hasEmail) {
+    return 'אני מבין/ה, זה באמת מתסכל.\nאני מעביר/ה את זה לנציג אנושי לבדיקה לפי הפרטים ששלחת. יחזרו אליך כאן בהקדם 🙏';
+  }
+
+  return 'אני מבין/ה, זה באמת מתסכל.\nאני מעביר/ה את זה לנציג אנושי לבדיקה — אין צורך לפנות שוב לוואטסאפ, זה כבר הערוץ הנכון.\n\nכדי שנאתר את החשבון מהר: מה המייל שאיתו נרשמת לקורס?';
+}
+
 // ========== Routes ==========
 
 // Health check
@@ -352,8 +383,13 @@ app.post('/whatsapp/incoming', async (req, res) => {
       temperature: 0.7
     });
 
-    const replyText = completion.choices[0].message.content;
+    let replyText = completion.choices[0].message.content;
     const tokensUsed = completion.usage?.total_tokens || 0;
+
+    if (containsContactLoopReferral(replyText) && isExistingCustomerSupportRequest(text)) {
+      console.log('[Guardrail] Replaced WhatsApp contact-loop referral with human escalation reply');
+      replyText = buildHumanEscalationReply(text);
+    }
 
     // Store assistant message
     storeMessage(conversation.id, 'assistant', replyText, null, tokensUsed);
